@@ -8,6 +8,7 @@ public class EnemySpawner : MonoBehaviour
     public float width = 10f;
     public float height = 5f;
     public float speed =  5f;
+    public float spawnDelay = 0.5f;
    
     private bool movingRight = true;
     private float xmin, xmax;
@@ -23,10 +24,7 @@ public class EnemySpawner : MonoBehaviour
         xmin = leftBoundary.x;
         xmax = rightBoundary.x;
 
-        foreach (Transform child in transform) { 
-        GameObject enemy =  Instantiate(enemyPrefab, child.transform.position, Quaternion.identity) as GameObject;
-        enemy.transform.parent = child;
-        }
+        positionUntilFull();
     }
 
     // Update is called once per frame
@@ -48,10 +46,62 @@ public class EnemySpawner : MonoBehaviour
         }else if (rightBoundaryOfFormation > xmax) {
             movingRight = false;
         }
+        if (AllMembersDead())
+        {
+            positionUntilFull();
+        }
     }
+   
+
+    void positionEnemies()
+    {
+        foreach (Transform child in transform)
+        {
+            GameObject enemy = Instantiate(enemyPrefab, child.transform.position, Quaternion.identity) as GameObject;
+            enemy.transform.parent = child;
+        }
+    }
+
+    void positionUntilFull() {
+        
+        Transform freePosition = NextFreePosition();
+        if (freePosition) {
+            GameObject enemy = Instantiate(enemyPrefab, freePosition.position, Quaternion.identity) as GameObject;
+            enemy.transform.parent = freePosition;
+        }
+        if (NextFreePosition())
+        {
+            Invoke("positionUntilFull", spawnDelay);
+        }
+        
+
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireCube(transform.position, new Vector3(width, height));
     }
 
+    Transform NextFreePosition()
+    {
+        foreach (Transform childPositionGameobject in transform)
+        {
+            if (childPositionGameobject.childCount == 0) {
+                return childPositionGameobject;
+            }
+        }
+        return null;
+    }
+
+    bool AllMembersDead()
+    {
+        foreach(Transform childPositionGameobject in transform)
+        {
+            if (childPositionGameobject.childCount > 0)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
 }

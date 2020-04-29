@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2204904655342073672}
   - component: {fileID: 9105854111875195698}
   - component: {fileID: 2615218943095366380}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,6 +101,7 @@ MonoBehaviour:
     type: 3}
   projectileSpeed: 5
   firingRate: 0.2
+  health: 250
 --- !u!60 &9105854111875195698
 PolygonCollider2D:
   m_ObjectHideFlags: 0
