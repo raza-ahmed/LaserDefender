@@ -102,6 +102,7 @@ MonoBehaviour:
   projectileSpeed: 5
   firingRate: 0.2
   health: 250
+  fireSound: {fileID: 8300000, guid: fcfd2845f6f29498c8ac9ed475d5cc0e, type: 3}
 --- !u!60 &9105854111875195698
 PolygonCollider2D:
   m_ObjectHideFlags: 0

@@ -148,6 +148,9 @@ MonoBehaviour:
     type: 3}
   projectileSpeed: 5
   shotsPerSecond: 0.5
+  scoreValue: 150
+  fireSound: {fileID: 8300000, guid: eb9eefc7e7c814a4cbcd9b6e022218b7, type: 3}
+  deathSound: {fileID: 8300000, guid: 2a6e2d29a962546f88a695349063f7df, type: 3}
 --- !u!95 &1739001984
 Animator:
   serializedVersion: 3
