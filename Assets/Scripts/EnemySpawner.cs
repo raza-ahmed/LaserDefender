@@ -42,9 +42,11 @@ public class EnemySpawner : MonoBehaviour
         float rightBoundaryOfFormation = transform.position.x + (0.5f * width);
         float leftBoundaryOfFormation = transform.position.x - (0.5f * width);
 
-        if(leftBoundaryOfFormation<xmin || rightBoundaryOfFormation > xmax)
+        if(leftBoundaryOfFormation<xmin)
         {
-            movingRight = !movingRight;
+            movingRight = true;
+        }else if (rightBoundaryOfFormation > xmax) {
+            movingRight = false;
         }
     }
     private void OnDrawGizmos()

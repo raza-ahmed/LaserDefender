@@ -1,19 +1,19 @@
 ﻿<Properties StartupConfiguration="{2739083D-BD6A-EF71-7844-B438E0DFC5F5}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Position.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EnemyBehaviour.cs">
     <Files>
-      <File FileName="../Number Wizard/Assets/Scripts/NumberWizards.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/LevelManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="1" Column="1" />
-      <File FileName="Assets/EnemySpawner.cs" Line="13" Column="44" />
-      <File FileName="Assets/Position.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="15" Column="16" />
+      <File FileName="Assets/Scripts/EnemySpawner.cs" Line="56" Column="1" />
+      <File FileName="Assets/Scripts/EnemyBehaviour.cs" Line="15" Column="68" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="LaserDefender" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True" />
-              <Node name="Position.cs" selected="True" />
+              <Node name="Scripts" expanded="True">
+                <Node name="EnemyBehaviour.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
@@ -22,7 +22,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="de0a9d6e-8fd7-42e5-875f-ad01d81f2aad" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="839323a0-57d4-4b7b-af9b-8b6d886cf132" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
